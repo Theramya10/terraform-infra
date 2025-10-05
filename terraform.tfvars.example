@@ -1,0 +1,5 @@
+domain_name = "mygruham.com"
+subdomain = "portfolio"
+full_domain = "portfolio.mygruham.com"
+aws_region = "ap-south-1"
+enable_initial_upload = false
