@@ -20,12 +20,12 @@ variable "subdomain" {
 }
 
 variable "full_domain" {
-  type = string
+  type        = string
   description = "fully qualified domain for the site (portfolio.mygruham.com)"
 }
 
 variable "enable_initial_upload" {
-  type    = bool
-  default = false
+  type        = bool
+  default     = false
   description = "If true, Terraform will upload a few core site objects using aws_s3_bucket_object (not recommended for many files)"
 }

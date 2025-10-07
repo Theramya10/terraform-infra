@@ -42,9 +42,9 @@ resource "aws_cloudfront_distribution" "cdn" {
   }
 
   viewer_certificate {
-    acm_certificate_arn            = aws_acm_certificate.cert.arn
-    ssl_support_method             = "sni-only"
-    minimum_protocol_version       = "TLSv1.2_2019"
+    acm_certificate_arn      = aws_acm_certificate.cert.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2019"
   }
 
   default_root_object = "index.html"
@@ -53,7 +53,8 @@ resource "aws_cloudfront_distribution" "cdn" {
     Name = var.full_domain
   }
 
-  depends_on = [aws_acm_certificate_validation.cert_validation_complete]
+  depends_on = [aws_acm_certificate_validation.cert]
+
 }
 
 # S3 bucket policy to allow CloudFront OAI to read objects

@@ -3,7 +3,7 @@
 #########################################
 
 resource "aws_s3_bucket" "site" {
-  bucket = var.full_domain   # e.g. portfolio.mygruham.com
+  bucket = var.full_domain # e.g. portfolio.mygruham.com
 
   tags = {
     Name        = var.full_domain
