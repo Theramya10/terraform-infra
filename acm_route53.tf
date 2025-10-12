@@ -1,6 +1,6 @@
 # Create a new public hosted zone for your domain
 resource "aws_route53_zone" "primary" {
-  name = "mygruham.com"
+  name    = "mygruham.com"
   comment = "Public hosted zone managed by Terraform"
 }
 
