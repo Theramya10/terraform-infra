@@ -1,0 +1,31 @@
+variable "aws_region" {
+  type    = string
+  default = "ap-south-1"
+}
+
+variable "project" {
+  type    = string
+  default = "portfolio"
+}
+
+variable "domain_name" {
+  type = string
+  # your base domain managed in Route53
+  description = "root domain (example: mygruham.com)"
+}
+
+variable "subdomain" {
+  type    = string
+  default = "portfolio"
+}
+
+variable "full_domain" {
+  type        = string
+  description = "fully qualified domain for the site (portfolio.mygruham.com)"
+}
+
+variable "enable_initial_upload" {
+  type        = bool
+  default     = false
+  description = "If true, Terraform will upload a few core site objects using aws_s3_bucket_object (not recommended for many files)"
+}

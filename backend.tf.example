@@ -1,0 +1,9 @@
+terraform {
+  backend "s3" {
+    bucket         = "tfstate-theramya-f3c9568c"
+    key            = "infra-portfolio/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "tfstate-lock-theramya" 
+    encrypt        = true
+  }
+}
