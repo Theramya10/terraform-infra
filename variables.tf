@@ -1,6 +1,7 @@
 variable "aws_region" {
-  type    = string
-  default = "ap-south-1"
+  description = "Primary AWS region"
+  type        = string
+  default     = "ap-south-1"
 }
 
 variable "project" {
@@ -28,4 +29,14 @@ variable "enable_initial_upload" {
   type        = bool
   default     = false
   description = "If true, Terraform will upload a few core site objects using aws_s3_bucket_object (not recommended for many files)"
+}
+variable "acm_certificate_region" {
+  description = "Region for ACM certificate (CloudFront requires us-east-1)"
+  type        = string
+  default     = "us-east-1"
+}
+variable "environment" {
+  description = "Deployment environment name"
+  type        = string
+  default     = "prod"
 }
