@@ -12,7 +12,7 @@ resource "aws_iam_openid_connect_provider" "github" {
 
 # IAM role for GitHub Actions to assume
 resource "aws_iam_role" "github_actions" {
-  name = "github-actions-deploy"
+  name = "Git-OIDC"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
