@@ -14,6 +14,5 @@ acm_certificate_region = "us-east-1"
 environment = "prod"
 
 # GitHub repository details (for OIDC role trust)
-github_org  = "theramya10"
+github_org  = "Theramya10"
 github_repo = "terraform-infra"
-

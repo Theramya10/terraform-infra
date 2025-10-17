@@ -8,10 +8,13 @@ terraform {
   }
 }
 
-# Default provider (ap-south-1)
 provider "aws" {
-  region = var.aws_region
+  region = var.region
   alias  = "ap-south-1"
+}
+provider "aws" {
+  region = var.acm_certificate_region
+  alias  = "us-east-1"
 }
 
 # Provider for us-east-1 (ACM for CloudFront must live here)

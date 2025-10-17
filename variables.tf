@@ -1,4 +1,4 @@
-variable "aws_region" {
+variable "region" {
   description = "Primary AWS region"
   type        = string
   default     = "ap-south-1"
@@ -39,4 +39,13 @@ variable "environment" {
   description = "Deployment environment name"
   type        = string
   default     = "prod"
+}
+variable "github_org" {
+  type        = string
+  description = "GitHub organization or username for OIDC"
+  default     = "Theramya10"
+}
+variable "github_repo" {
+  description = "GitHub repository for OIDC trust"
+  type        = string
 }
